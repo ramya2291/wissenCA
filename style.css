@@ -680,4 +680,20 @@ textarea{
    .contact h1{
       font-size: 20px;
    }
+   .incenhead{
+      font-size: 20px;
+   }
+}
+@media (max-width: 400px){
+   .incenhead{
+      font-size: 20px;
+   }
+}
+@media (max-width: 350px){
+   .incenhead{
+      font-size: 15px;
+   }
+   .more{
+      font-size: 12px;
+   }
 }
