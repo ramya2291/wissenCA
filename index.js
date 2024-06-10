@@ -4,19 +4,11 @@ const close=document.getElementById("close");
 const cards=document.querySelectorAll(".card");
 const sentences=document.querySelectorAll(".sent");
 const recards=document.querySelectorAll(".recard");
-const right=document.querySelector('.rightarrow');
-const left=document.querySelector('.leftarrow');
 let n=cards.length;
 let current_move =0;
 const step=450;
 for(let i=0;i<cards.length;i++){
    cards[i].classList.add("continuous");
-}
-function updateTransform() {
-   for (let i = 0; i < n; i++) 
-      {
-      cards[i].style.transform =`translateX(${current_move}px)`;
-   }
 }
 var options = {
     root: null,
@@ -72,21 +64,6 @@ window.addEventListener("scroll",function(){
    drop.style.right='700px';
    menu.style.display='block';
 })
-
-right.addEventListener("click",function(){
-   if(current_move >= -4940){
-      current_move-=step;
-      updateTransform();
-   }
-   console.log(current_move);
-})
-left.addEventListener("click",function(){
-   if(current_move <= 0){
-      current_move+=step;
-      updateTransform();
-   }
-   console.log(current_move);
-});
 menu.addEventListener("click",function(){
    drop.style.right='-20px';
    menu.style.display='none'
