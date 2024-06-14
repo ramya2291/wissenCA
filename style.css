@@ -530,6 +530,14 @@ textarea{
    margin-top: 10px;
    border-radius: 10px;
 }
+input, select, textarea{
+   color: #fdfafa;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .contact .details{
    display: flex;
    flex-direction: column;
