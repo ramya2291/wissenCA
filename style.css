@@ -86,7 +86,7 @@ nav{
    margin-top: 30px;
    font-family: "Poppins", sans-serif;
    font-weight: 300;
-   font-style: normal; 
+   font-style: normal;
 } 
 .navbuttons .buttons{ 
    display: flex; 
@@ -395,7 +395,6 @@ nav{
    margin: 1rem;
    position: relative;
    transition: all .3s;
-   opacity: 0.3;
 }
 .incen .card.continuous{
    animation: 25s slide infinite linear;
@@ -430,14 +429,6 @@ nav{
 }
 .incen .card6{
    background: url(./icons/in6.jpg);
-}
-.incen .card.centered{
-   opacity: 1;
-   size: 30px;
-}
-.incen .card:hover{
-   opacity: 1;
-   size: 30px;
 }
 .incen .title {
 width: 100%;
@@ -700,10 +691,20 @@ input::-webkit-inner-spin-button {
    .incenhead{
       font-size: 20px;
    }
+   .info{
+      font-size: small;
+   }
+   .info1{
+      margin-left: 45px;
+      margin-top: -20px;
+   }
 }
 @media (max-width: 400px){
    .incenhead{
       font-size: 20px;
+   }
+   nav{
+      margin-right: 100px;
    }
 }
 @media (max-width: 350px){
