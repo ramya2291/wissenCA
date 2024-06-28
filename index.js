@@ -5,8 +5,6 @@ const cards=document.querySelectorAll(".card");
 const sentences=document.querySelectorAll(".sent");
 const recards=document.querySelectorAll(".recard");
 let n=cards.length;
-let current_move =0;
-const step=450;
 for(let i=0;i<cards.length;i++){
    cards[i].classList.add("continuous");
 }
@@ -74,4 +72,4 @@ close.addEventListener("click",function(){
 })
 const date=new Date();
 const copy=document.querySelector(".copy");
-copy.innerHTML=`\u00A9 ${date.getFullYear()} All Rights Reserved By Wissenaire`;
+copy.innerHTML=`\u00A9 ${date.getFullYear()} All Rights Reserved</br> By Wissenaire`;
