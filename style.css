@@ -722,7 +722,7 @@ input::-webkit-inner-spin-button {
       gap: 0px;
    }
    .contact .details{
-      width: 180%;
+      width: 100%;
    
    }
    .dispic{
@@ -805,7 +805,7 @@ input::-webkit-inner-spin-button {
       font-size: 20px;
    }
    .contact .details{
-      width: 150%;
+      width: 100%;
    }
    .about{
       padding: 2rem;
@@ -828,7 +828,7 @@ input::-webkit-inner-spin-button {
       font-size: 12px;
    }
    .contact .details{
-      width: 130%;
+      width: 100%;
    }
    .wisslogo{
       display: none;
