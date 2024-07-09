@@ -8,8 +8,28 @@ body{
    background-repeat: no-repeat; background-size: cover; 
    overflow-x: hidden;
 } 
+.w img{
+   width: 6vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.wisshead{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.grad,.w{
+   border: none;
+}
 html{
    scroll-behavior: smooth;
+}
+dotlottie-player{
+   position: fixed;
+   z-index: -1;
+   top:-150px;
+   left: -150px;
 }
 .menu{
    font-size: 40px;
@@ -69,24 +89,31 @@ a{
     text-decoration: none; 
     color: white; 
 } 
-nav{ 
-   margin:0px 5vw;
-   display: flex; 
-   justify-content: space-between; 
-   z-index: 10;
+.navclass{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100vw;
+   height: 9vh;
    position: fixed;
+   padding-top: 20px;
+   z-index: 10;
+}
+nav{ 
+   display: flex; 
+   justify-content: space-between;
    align-items: center; 
    background-color: rgb(3, 57, 63); 
    backdrop-filter: blur(100px);
-   width :80vw;
-   height: 50px; 
+   width :85vw;
+   height: 9vh; 
    border-radius: 10px; 
    color: white; 
-   padding: 0px 40px; 
-   margin-top: 30px;
+   padding: 0px 40px;
    font-family: "Poppins", sans-serif;
    font-weight: 300;
    font-style: normal;
+   font-size: 3vh;
 } 
 .navbuttons .buttons{ 
    display: flex; 
@@ -99,7 +126,7 @@ nav{
    padding-right: 10px;
 }
 .buttons div:hover{
-   background-color: #295d77;
+   background: linear-gradient(to bottom, #4289b3, rgba(12, 82, 89, 0.968));
    border-radius: 20px;
    padding: 5px 18px;
 }
@@ -130,6 +157,8 @@ nav{
    align-items: center; 
    text-align: center;
    gap: 20px;
+   width: 50%;
+   aspect-ratio: 1;
 }
 .dishead{
    display: flex; 
@@ -139,11 +168,11 @@ nav{
    text-align: center; 
    color: white; 
    font-family: "Montserrat", sans-serif; font-optical-sizing: auto; 
-   font-weight: 700; 
+   font-weight: 500; 
    letter-spacing: 1px;
    margin-top: -150px;
    font-style: normal; 
-   font-size: 30px;
+   font-size: max(5vh, 4vw);
 }
 .login {
    width: 120px;
@@ -163,8 +192,8 @@ nav{
    transition: all 0s ease-in;
 }
 .logion{
-   width: 30px;
-   height: 30px;
+   width: 25%;
+   height: 80%;
    color: white;
    background: linear-gradient(to bottom, #4289b3, rgba(12, 82, 89, 0.968));
    border-radius: 50px;
@@ -176,10 +205,11 @@ nav{
    margin-right: -20px;
 }
 .dispic{
-   width: 500px;
-   height: 400px;
+   width: 50%;
+   aspect-ratio: 1;
    background-image: url(./icons/img1.jpg);
-   background-size: cover;
+   background-repeat: no-repeat;
+   background-size: contain;
 }
 .logtext {
    height: 100%;
@@ -196,6 +226,7 @@ nav{
 } 
 .login:hover .logion{
    width: 110px;
+   height: 80%;
    transition-duration: 0.3s;
    transform: translateX(-10px);
 }
@@ -311,7 +342,7 @@ nav{
    padding: 10px;
    bottom: -100px;
    background: #00000050;
-   backdrop-filter: blur(20px);
+   backdrop-filter: blur(15px);
    border-radius: 15px;
    transition:.3s ease-in-out;
 }
@@ -331,12 +362,13 @@ nav{
    border-top-left-radius: 10px;
    margin: 0 auto;
    transition: .3s ease-in-out;
+   background-position-y: -50px;
 }
 .recard2 .image{
    background-image: url(./icons/ran2.jpg);
 }
 .recard3 .image{
-   background-image: url(./icons/ran3.jpg);
+   background-image: url(./icons/img2.jpeg);
 }
 .recard4 .image{
    background-image: url(./icons/ran4.jpeg);
@@ -382,6 +414,36 @@ nav{
    font-weight: 300;
    font-style: normal;
    font-size: 25px;
+   color:#0072b1;
+}
+.grad2{
+   background: linear-gradient(to right, #006989 ,#006989);
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   border-image: linear-gradient( to right,rgb(188, 48, 92), #006989 ) 30;
+   border-width: 4px 0px 4px 0px;
+   padding: 0px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   border-style: solid;
+}
+.grad{
+   background: linear-gradient(to right,rgb(188, 48, 92),rgb(188, 48, 92));
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   border-image: linear-gradient( to right,rgb(188, 48, 92), #006989 ) 30;
+   border-width: 4px 0px 4px 0px;
+   padding: 0px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   border-style: solid;
+}
+@keyframes gradmove {
+   0%{
+      border-image: linear-gradient( to right,rgb(188, 48, 92) 100%, #006989 ) 30;
+   }
 }
 .incen .card{
    min-width:200px;
@@ -401,13 +463,20 @@ nav{
    animation: 25s slide infinite linear;
 }
 .incen .card p{
-   background-color: #006989;
+   background-color: #0072b1;
    border-radius: 10px;
    padding: 10px;
    position: absolute;
    right:15px;
+   font-family: "Josefin Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
    bottom: 10px;
+   text-wrap: wrap;
+   font-size: 16px;
    width:80%;
+   padding-top: 12px;
    box-shadow: 0px 0px 10px black,inset 2px 2px 5px rgb(0, 0, 0);
 }
 .incen .card2{
@@ -474,13 +543,13 @@ margin: 1rem auto;
 .contact{
    position: relative;
    display: flex;
-   align-items: center;
+   align-items: flex-start;
    justify-content: space-between;
    background-color: rgb(16, 16, 16);
    width:410px;
    margin:50px auto;
    margin-top: 150px;
-   padding: 20px;
+   padding:40px 20px 20px 20px;
    border-radius: 0px 0px 10px 10px;
 }
 .contact h1{
@@ -635,14 +704,39 @@ input::-webkit-inner-spin-button {
 .wisslink:hover{
    background-color: black;
 }
+@media (max-width: 800px) and (min-width:700px){
+   nav{
+      font-size: 18px;
+      padding: 2px 17px;
+      width: 90vw;
+      padding-left: 28px;
+      border-radius: 15px;
+   }
+}
 @media (max-width: 700px){
    .navbuttons{
       display: none;
    }
    .display{
-      margin-top: 100px;
       flex-direction: column;
-      padding-top:250px;
+      gap: 0px;
+   }
+   .contact .details{
+      width: 180%;
+   
+   }
+   .dispic{
+      aspect-ratio: 1;
+      width: 100vw;
+   }
+   .dis1{
+      height: 12.5vh;
+      aspect-ratio: 1;
+      margin: 0;
+      margin-top: 100px;
+   }
+   .dishead{
+      font-size: 30px;
    }
    .menu{
       display: block;
@@ -659,14 +753,14 @@ input::-webkit-inner-spin-button {
    }
    .contact{
       width:70%;
+      flex-direction: column;
    }
    .info1{
       margin-left: 35px;
    }
    nav{
-      width: 70%;
-      margin-top: -80px;
-      margin-left: 7.5vw;
+      width: 70vw;
+      margin: auto;
    }
    .accts div{
       height: 35px;
@@ -686,10 +780,7 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 500px)
 {
-   .dis1{
-      margin-top: 90px;
-   }
-   .contact h1{
+   nav{
       font-size: 20px;
    }
    .incenhead{
@@ -702,20 +793,47 @@ input::-webkit-inner-spin-button {
       margin-left: 45px;
       margin-top: -20px;
    }
+   .dis1{
+      margin-top: 250px;
+   }
+   .display{
+      gap:50px
+   }
 }
-@media (max-width: 400px){
+@media (max-width: 390px){
    .incenhead{
       font-size: 20px;
    }
-   nav{
-      margin-right: 100px;
+   .contact .details{
+      width: 150%;
+   }
+   .about{
+      padding: 2rem;
+   }
+   .dis1{
+      margin-top: 135px;
    }
 }
 @media (max-width: 350px){
    .incenhead{
       font-size: 15px;
    }
+   .dis1{
+      margin-top: 150px;
+   }
+   .display{
+      gap:25px;
+   }
    .more{
       font-size: 12px;
+   }
+   .contact .details{
+      width: 130%;
+   }
+   .wisslogo{
+      display: none;
+   }
+   .info1{
+      margin-left: 10px;
    }
 }
