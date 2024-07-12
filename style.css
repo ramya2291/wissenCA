@@ -709,8 +709,7 @@ input::-webkit-inner-spin-button {
       gap: 0px;
    }
    .contact .details{
-      width: 180%;
-   
+      width: 100%;
    }
    .dispic{
       aspect-ratio: 1;
@@ -792,9 +791,6 @@ input::-webkit-inner-spin-button {
    .incenhead{
       font-size: 20px;
    }
-   .contact .details{
-      width: 150%;
-   }
    .about{
       padding: 2rem;
    }
@@ -814,9 +810,6 @@ input::-webkit-inner-spin-button {
    }
    .more{
       font-size: 12px;
-   }
-   .contact .details{
-      width: 130%;
    }
    .wisslogo{
       display: none;
