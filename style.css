@@ -5,8 +5,7 @@ body{
    min-height: 100vh; 
    min-width: 100vw; 
    background-image: linear-gradient(#00001C,#000C1A);
-   background-repeat: no-repeat; background-size: cover; 
-   overflow-x: hidden;
+   background-repeat: no-repeat; background-size: cover;
 } 
 .w img{
    width: 6vh;
@@ -407,6 +406,7 @@ nav{
    align-items: center;
    justify-content: center;
    margin-top: 70px;
+   overflow-x: auto;
 }
 .incenhead{
    color: white;
@@ -416,29 +416,16 @@ nav{
    font-size: 25px;
    color:#0072b1;
 }
-.grad2{
-   background: linear-gradient(to right, #006989 ,#006989);
+.grad2,.grad{
+   background: linear-gradient(to right,rgb(155, 186, 184),rgb(106, 236, 225));
    -webkit-text-fill-color: transparent;
    background-clip: text;
-   border-image: linear-gradient( to right,rgb(188, 48, 92), #006989 ) 30;
-   border-width: 4px 0px 4px 0px;
+   border: none;
+   border-bottom: rgb(153, 193, 201) solid 4px;
    padding: 0px;
    height: 40px;
    display: flex;
    align-items: center;
-   border-style: solid;
-}
-.grad{
-   background: linear-gradient(to right,rgb(188, 48, 92),rgb(188, 48, 92));
-   -webkit-text-fill-color: transparent;
-   background-clip: text;
-   border-image: linear-gradient( to right,rgb(188, 48, 92), #006989 ) 30;
-   border-width: 4px 0px 4px 0px;
-   padding: 0px;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   border-style: solid;
 }
 @keyframes gradmove {
    0%{
@@ -722,7 +709,7 @@ input::-webkit-inner-spin-button {
       gap: 0px;
    }
    .contact .details{
-      width: 100%;
+      width: 180%;
    
    }
    .dispic{
@@ -761,7 +748,7 @@ input::-webkit-inner-spin-button {
    nav{
       width: 70vw;
       margin: auto;
-      height: 7vh;
+      height: 8vh;
    }
    .accts div{
       height: 35px;
@@ -806,7 +793,7 @@ input::-webkit-inner-spin-button {
       font-size: 20px;
    }
    .contact .details{
-      width: 100%;
+      width: 150%;
    }
    .about{
       padding: 2rem;
@@ -829,7 +816,7 @@ input::-webkit-inner-spin-button {
       font-size: 12px;
    }
    .contact .details{
-      width: 100%;
+      width: 130%;
    }
    .wisslogo{
       display: none;
